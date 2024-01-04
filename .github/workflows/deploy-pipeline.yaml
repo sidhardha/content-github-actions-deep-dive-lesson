@@ -1,15 +1,13 @@
 name: Deploy my Lambda Function
-
+permissions:
+  id-token: write
+  contents: read
 # trigger on all push events to main branch
 on: 
   push:
     branches:
       - main
       - lab
-permissions:
-  id-token: write
-  contents: read
-
 jobs:
 
   build:
